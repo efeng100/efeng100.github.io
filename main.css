@@ -1,3 +1,67 @@
+@import url("//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book");
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* font-family: 'Roboto', sans-serif; */
+body {
+    box-sizing: border-box;
+    font-family: "Circular Std Book", sans-serif;
+}
+
+#fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background-color: white;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    z-index: 1;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    line-height: 3rem;
+}
+
+@media (min-width: 1150px) {
+    #navbar {
+        width: 1150px;
+    }
+}
+
+.nav-left {
+    float: left;
+}
+
+.nav-right {
+    float: right;
+}
+
+.nav-item {
+    display: inline-block;
+    margin: 0.5rem 1.5rem;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+main {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5rem;
+    width: 100vw;
+}
+
+@media (min-width: 1150px) {
+    main {
+        width: 1150px;
+    }
+}
