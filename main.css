@@ -110,9 +110,7 @@ main {
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
-    margin-top: 5rem;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
+    margin: 5rem 1.25rem;
 }
 
 @media (min-width: 1150px) {
