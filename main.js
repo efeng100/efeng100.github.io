@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const projectCardGrid = document.querySelector("#project-cards");
 
 const projectData = [
@@ -5,31 +6,48 @@ const projectData = [
         name: "Online Pokédex",
         image: "project-thumbnails/pokedex.PNG",
         altText: "Pokédex Thumbnail",
-        description: "",
+        description: "A web-based version of the Pokédex, the digital encyclopedia of Pokémon from the video game series. \
+        It pulls data from the PokéAPI to display Pokémon in a responsive card grid design. \
+        Click on a species card to see additional Pokémon information.",
+        link: "efeng100.github.io/pokedex",
     },
     {
         name: "Conway's Game of Life",
         image: "project-thumbnails/conway-game-of-life.PNG",
         altText: "Conway's Game of Life Thumbnail",
-        description: "",
+        description: "A Java-based simulation of Conway’s Game of Life with a GUI built with Java Swing. \
+        The underlying code is designed using the model-view-controller architecture. \
+        Users can choose the board's initial state (width, height, location of living/dead cells), \
+        as well as the adjacent cell thresholds for cell birth and survival. \
+        The game also includes a multithreaded auto-advance feature that can update the board at a user-chosen tick rate.",
+        link: "github.com/efeng100/ConwayGameOfLife",
     },
     {
         name: "AI Checkers",
         image: "project-thumbnails/checkers.PNG",
         altText: "Checkers Thumbnail",
-        description: "",
+        description: "A one-player or two-player checkers game in Python with a GUI created using the Tkinter library. \
+        In one-player mode, the opponent AI player calculates their best move using a recursive minimax function that considers \
+        best/worse case scenarios over a chosen number of turns in the future.",
+        link: "",
     },
     {
         name: "Minesweeper",
         image: "project-thumbnails/minesweeper.PNG",
         altText: "Minesweeper Thumbnail",
-        description: "",
+        description: "Minesweeper in Python with a GUI built with the Tkinter library. \
+        The user chooses the board's width and height, as well as the number of hidden mines. \
+        The game includes the standard controls for revealing bombs (left click), flagging tiles (right click), and \
+        revealing around a revealed tile with sufficient adjacent flags (double left click).",
+        link: "",
     },
     {
         name: "Discus Dice Game",
         image: "project-thumbnails/discus.PNG",
         altText: "Discus Dice Game Thumbnail",
-        description: "",
+        description: "A Java implementation of Reiner Knizia's Dice Decathlon Discus event (a family tabletop game) \
+        with a GUI built with JavaFX",
+        link: "",
     },
 ];
 
@@ -38,12 +56,14 @@ function createProjectCardDiv(id) {
     let card = document.createElement("div");
     card.classList.add("card");
 
+    // Card Image
     let cardImage = document.createElement("img");
     cardImage.classList.add("card-image");
     cardImage.setAttribute("src", project.image);
     cardImage.setAttribute("alt", project.altText);
     card.appendChild(cardImage);
 
+    // Card Overlay
     let cardOverlay = document.createElement("div");
     cardOverlay.classList.add("card-overlay");
 
@@ -71,12 +91,65 @@ function displayProjectCards() {
     }
 }
 
-function displayDetailedProjectCard(id) {
-    alert("Project descriptions coming soon!");
+function displayDetailedProjectCard(id) {    
+    let project = projectData[id];
+
+    let card = document.createElement("div");
+    card.classList.add("detailed-card");
+
+    // Detailed Card Top
+    let cardTop = document.createElement("div");
+    cardTop.classList.add("detailed-card-top");
+
+    // Detailed Card Close Button
+    let cardCloseButton = document.createElement("img");
+    cardCloseButton.classList.add("detailed-card-close-button");
+    cardCloseButton.setAttribute("src", "close-button.PNG");
+    cardCloseButton.addEventListener("click", removeDetailedProjectCard);
+    cardTop.appendChild(cardCloseButton);
+
+    // Detailed Card Image
+    let cardImage = document.createElement("img");
+    cardImage.classList.add("detailed-card-image");
+    cardImage.setAttribute("src", project.image);
+    cardImage.setAttribute("alt", project.altText);
+    cardTop.appendChild(cardImage);
+
+    card.appendChild(cardTop);
+
+    // Detailed Card Bottom
+    let cardBottom = document.createElement("div");
+    cardBottom.classList.add("detailed-card-bottom");
+
+    // Detailed Card Name
+    let cardName = document.createElement("h4");
+    cardName.classList.add("detailed-card-name");
+    cardName.textContent = project.name;
+    cardBottom.appendChild(cardName);
+
+    // Detailed Card Description
+    let cardDescription = document.createElement("p");
+    cardDescription.classList.add("detailed-card-description");
+    cardDescription.innerHTML = project.description;
+    if (project.link) {
+        cardDescription.innerHTML += `<br><br>Check it out here: <a href="https://${project.link}" target="_blank">${project.link}</a>`;
+    }
+    cardBottom.appendChild(cardDescription);
+
+    card.appendChild(cardBottom);
+
+    // Detailed Card Shadow
+    let cardShadow = document.createElement("div");
+    cardShadow.classList.add("detailed-card-shadow");
+    cardShadow.addEventListener("click", removeDetailedProjectCard);
+
+    body.appendChild(cardShadow);
+    body.appendChild(card);
 }
 
 function removeDetailedProjectCard(event) {
-
+    body.querySelector(".detailed-card").remove();
+    body.querySelector(".detailed-card-shadow").remove();
 }
 
 displayProjectCards();
