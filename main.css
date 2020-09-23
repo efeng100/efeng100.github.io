@@ -56,12 +56,72 @@ main {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 5rem;
     width: 100vw;
+    margin-top: 5rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
 }
 
 @media (min-width: 1150px) {
     main {
         width: 1150px;
     }
+}
+
+#title {
+    max-width: 40rem;
+    margin-top: 25vh;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 2.6rem;
+}
+
+#bio-main {
+    max-width: 40rem;
+    margin-right: 2rem;
+    font-size: 1.17rem;
+    line-height: 1.75rem;
+}
+
+#bio-email {
+    width: auto;
+    margin-top: 1.2rem;
+    display: inline-block;
+    color: black;
+    font-size: 1.17rem;
+    text-decoration: none;
+    line-height: 1.75rem;
+    transition: 0.1s ease-in-out all;
+
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+
+    -webkit-transition: 0.2s ease-in-out all;
+    -moz-transition:    0.2s ease-in-out all;
+    -ms-transition:     0.2s ease-in-out all;
+    -o-transition:      0.2s ease-in-out all;
+    transition:         0.2s ease-in-out all;
+}
+
+#bio-email:hover {
+    color: white;
+    background-color: black;
+}
+
+#project-header {
+    margin-top: 25vh;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media (max-height: 550px) {
+    #title, #project-header {
+        margin-top: 137.5px;
+    }
+}
+
+#cards {
+    display: grid;
 }
