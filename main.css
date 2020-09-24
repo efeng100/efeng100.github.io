@@ -59,6 +59,7 @@ body {
     background-color: peachpuff;
     font-family: CircularStd, sans-serif;
     overflow-y: auto;
+    margin-bottom: 4rem;
 }
 
 #fixed-top {
@@ -112,22 +113,58 @@ body {
     height: 2rem;
     margin-top: 0.9rem;
     margin-right: 1.27rem;
-}
-
-.hamburger-menu {
-
-}
-
-.hamburger-menu-shadow {
-    
+    cursor: pointer;
 }
 
 .hamburger-menu-close-button {
+    position: fixed;
+    top: 1.2rem;
+    right: 1rem;
+    width: 1.5rem;
+    filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(138deg) brightness(110%) contrast(100%);
+    cursor: pointer;
+    z-index: 3;
+    transition: 0.2s ease-in-out all;
+}
 
+.hamburger-menu-close-button:hover {
+    filter: invert(86%) sepia(16%) saturate(443%) hue-rotate(138deg) brightness(99%) contrast(88%);
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 3;
 }
 
 .hamburger-menu-item{
+    margin: 1rem 0rem;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-decoration: underline solid transparent;
+    transition: 0.2s ease-in-out all;
+}
 
+.hamburger-menu-item:hover {
+    color: powderblue;
+    text-decoration: underline solid powderblue;
+}
+
+.hamburger-menu-shadow {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
 }
 
 main {
@@ -169,16 +206,8 @@ main {
     font-size: 1.17rem;
     text-decoration: none;
     line-height: 1.75rem;
-
-    border-bottom-color: black;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-
-    -webkit-transition: 0.2s ease-in-out all;
-    -moz-transition:    0.2s ease-in-out all;
-    -ms-transition:     0.2s ease-in-out all;
-    -o-transition:      0.2s ease-in-out all;
-    transition:         0.2s ease-in-out all;
+    border-bottom: 1px solid black;
+    transition: 0.2s ease-in-out all;
 }
 
 #bio-email:hover {
@@ -239,7 +268,7 @@ main {
     right: 0;
     bottom: 0;
     background-color: hsla(187, 52%, 70%, 0.7);    
-    transition:         0.2s ease-in-out all;
+    transition: 0.2s ease-in-out all;
 }
 
 .card-overlay:hover {
@@ -341,16 +370,8 @@ main {
     padding: 0rem 0.1rem;
     color: black;
     text-decoration: none;
-
-    border-bottom-color: black;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-
-    -webkit-transition: 0.2s ease-in-out all;
-    -moz-transition:    0.2s ease-in-out all;
-    -ms-transition:     0.2s ease-in-out all;
-    -o-transition:      0.2s ease-in-out all;
-    transition:         0.2s ease-in-out all;
+    border-bottom: 1px solid black;
+    transition: 0.2s ease-in-out all;
 }
 
 .detailed-card-description a:hover {

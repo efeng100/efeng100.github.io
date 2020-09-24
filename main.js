@@ -157,7 +157,7 @@ const expandedRightNavBar = document.querySelectorAll(".nav-right");
 const hamburgerButton = createHamburgerButton();
 const hamburgerMenu = createHamburgerMenu();
 
-const navBarQuery = window.matchMedia("(max-width: 700px)");
+const navBarQuery = window.matchMedia("(max-width: 43.75rem)");
 navBarQuery.addEventListener("change", updateNavBar);
 updateNavBar();
 
@@ -198,7 +198,52 @@ function createHamburgerButton() {
 }
 
 function createHamburgerMenu() {
-    
+    let container = document.createElement("div");
+
+    // Hamburger Menu Close Button
+    let hamburgerMenuCloseButton = document.createElement("img");
+    hamburgerMenuCloseButton.classList.add("hamburger-menu-close-button");
+    hamburgerMenuCloseButton.setAttribute("src", "close-button.PNG");
+    hamburgerMenuCloseButton.addEventListener("click", removeHamburgerMenu);
+
+    // Hamburger Menu
+    let hamburgerMenu = document.createElement("div");
+    hamburgerMenu.classList.add("hamburger-menu");
+
+    // Hamburger Menu GitHub
+    let hamburgerMenuGithub = document.createElement("a");
+    hamburgerMenuGithub.classList.add("hamburger-menu-item");
+    hamburgerMenuGithub.setAttribute("href", "https://github.com/efeng100");
+    hamburgerMenuGithub.setAttribute("target", "_blank");
+    hamburgerMenuGithub.textContent = "github";
+    hamburgerMenu.appendChild(hamburgerMenuGithub);
+
+    // Hamburger Menu LinkedIn
+    let hamburgerMenuLinkedin = document.createElement("a");
+    hamburgerMenuLinkedin.classList.add("hamburger-menu-item");
+    hamburgerMenuLinkedin.setAttribute("href", "https://www.linkedin.com/in/efeng1/");
+    hamburgerMenuLinkedin.setAttribute("target", "_blank");
+    hamburgerMenuLinkedin.textContent = "linkedin";
+    hamburgerMenu.appendChild(hamburgerMenuLinkedin);
+
+    // Hamburger Menu Resume
+    let hamburgerMenuResume = document.createElement("a");
+    hamburgerMenuResume.classList.add("hamburger-menu-item");
+    hamburgerMenuResume.setAttribute("href", "Edward Feng - Resume.pdf");
+    hamburgerMenuResume.setAttribute("target", "_blank");
+    hamburgerMenuResume.textContent = "resumé";
+    hamburgerMenu.appendChild(hamburgerMenuResume);
+
+    // Hamburger Menu Shadow
+    let hamburgerMenuShadow = document.createElement("div");
+    hamburgerMenuShadow.classList.add("hamburger-menu-shadow");
+    hamburgerMenuShadow.addEventListener("click", removeHamburgerMenu);
+
+    container.appendChild(hamburgerMenuCloseButton);
+    container.appendChild(hamburgerMenu);
+    container.appendChild(hamburgerMenuShadow);
+
+    return container;
 }
 
 function displayHamburgerMenu(event) {
