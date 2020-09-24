@@ -1,4 +1,3 @@
-const body = document.querySelector("body");
 const projectCardGrid = document.querySelector("#project-cards");
 
 const projectData = [
@@ -143,13 +142,69 @@ function displayDetailedProjectCard(id) {
     cardShadow.classList.add("detailed-card-shadow");
     cardShadow.addEventListener("click", removeDetailedProjectCard);
 
-    body.appendChild(cardShadow);
-    body.appendChild(card);
+    document.body.appendChild(cardShadow);
+    document.body.appendChild(card);
 }
 
 function removeDetailedProjectCard(event) {
-    body.querySelector(".detailed-card").remove();
-    body.querySelector(".detailed-card-shadow").remove();
+    document.body.querySelector(".detailed-card").remove();
+    document.body.querySelector(".detailed-card-shadow").remove();
 }
 
 displayProjectCards();
+const navBarList = document.querySelector("#navbar").querySelector("ul");
+const expandedRightNavBar = document.querySelectorAll(".nav-right");
+const hamburgerButton = createHamburgerButton();
+const hamburgerMenu = createHamburgerMenu();
+
+const navBarQuery = window.matchMedia("(max-width: 700px)");
+navBarQuery.addEventListener("change", updateNavBar);
+updateNavBar();
+
+function updateNavBar(event) {
+    if (navBarQuery.matches) {
+        collapseNavBar();
+    } else {
+        expandNavBar();
+    }
+}
+
+function collapseNavBar() {
+    expandedRightNavBar.forEach((item) => {
+        item.remove();
+    });
+    navBarList.appendChild(hamburgerButton);
+}
+
+function expandNavBar() {
+    hamburgerButton.remove();
+    expandedRightNavBar.forEach((item) => {
+        navBarList.appendChild(item);
+    });
+}
+
+function createHamburgerButton() {
+    let container = document.createElement("li");
+    container.classList.add("nav-right");
+
+    let hamburgerButton = document.createElement("img");
+    hamburgerButton.classList.add("nav-item", "hamburger-button");
+    hamburgerButton.setAttribute("src", "hamburger-button.png");
+    hamburgerButton.setAttribute("alt", "≡");
+    hamburgerButton.addEventListener("click", displayHamburgerMenu);
+    
+    container.appendChild(hamburgerButton);
+    return container;
+}
+
+function createHamburgerMenu() {
+    
+}
+
+function displayHamburgerMenu(event) {
+    document.body.appendChild(hamburgerMenu);
+}
+
+function removeHamburgerMenu(event) {
+    hamburgerMenu.remove();
+}

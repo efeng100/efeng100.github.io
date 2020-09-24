@@ -56,8 +56,9 @@
 
 body {
     box-sizing: border-box;
+    background-color: peachpuff;
     font-family: CircularStd, sans-serif;
-    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #fixed-top {
@@ -78,11 +79,12 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100vw;
+    width: 90vw;
     line-height: 3rem;
+    margin-right: 1.1rem;
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1278px) {
     #navbar {
         width: 1150px;
     }
@@ -106,15 +108,36 @@ body {
     text-decoration: none;
 }
 
+.hamburger-button {
+    height: 2rem;
+    margin-top: 0.9rem;
+    margin-right: 1.25rem;
+}
+
+.hamburger-menu {
+
+}
+
+.hamburger-menu-shadow {
+    
+}
+
+.hamburger-menu-close-button {
+
+}
+
+.hamburger-menu-item{
+
+}
+
 main {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 100vw;
-    margin: 5rem 1.25rem;
+    width: 90vw;
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1278px) {
     main {
         width: 1150px;
     }
@@ -182,8 +205,6 @@ main {
     grid-column-gap: 2rem; 
     grid-row-gap: 1rem;
     grid-auto-rows: 1fr;
-
-    margin-right: 2.5rem;
 }
 
 @media (max-width: 1000px) {
@@ -194,7 +215,7 @@ main {
 
 .card {
     position: relative;
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(247, 247, 247);
     cursor: pointer;
 }
 
@@ -272,9 +293,9 @@ main {
 .detailed-card-close-button {
     display: block;
     position: absolute;
-    top: 1rem;
-    right: 1.25rem;
-    width: 25px;
+    top: 1.4rem;
+    right: 1.7rem;
+    width: 12px;
     cursor: pointer;
 }
 
