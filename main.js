@@ -157,7 +157,7 @@ const expandedRightNavBar = document.querySelectorAll(".nav-right");
 const hamburgerButton = createHamburgerButton();
 const hamburgerMenu = createHamburgerMenu();
 
-const navBarQuery = window.matchMedia("(max-width: 43.75rem)");
+const navBarQuery = window.matchMedia("(max-width: 1000px)");
 navBarQuery.addEventListener("change", updateNavBar);
 updateNavBar();
 

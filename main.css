@@ -82,6 +82,7 @@ body {
     transform: translateX(-50%);
     width: 90vw;
     line-height: 3rem;
+    margin-left: -0.2rem;
     margin-right: 1.2rem;
 }
 
