@@ -157,9 +157,8 @@ const expandedRightNavBar = document.querySelectorAll(".nav-right");
 const hamburgerButton = createHamburgerButton();
 const hamburgerMenu = createHamburgerMenu();
 
-const navBarQuery = window.matchMedia("(orientation: portrait)");
+const navBarQuery = window.matchMedia("screen and (max-width: 62.5rem)");
 navBarQuery.addEventListener("change", updateNavBar);
-collapseNavBar();
 updateNavBar();
 
 function updateNavBar(event) {
