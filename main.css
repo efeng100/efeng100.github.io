@@ -81,7 +81,7 @@ body {
     transform: translateX(-50%);
     width: 90vw;
     line-height: 3rem;
-    margin-right: 1.1rem;
+    margin-right: 1.2rem;
 }
 
 @media (min-width: 1278px) {
@@ -111,7 +111,7 @@ body {
 .hamburger-button {
     height: 2rem;
     margin-top: 0.9rem;
-    margin-right: 1.25rem;
+    margin-right: 1.27rem;
 }
 
 .hamburger-menu {
