@@ -103,7 +103,7 @@ function displayDetailedProjectCard(id) {
     // Detailed Card Close Button
     let cardCloseButton = document.createElement("img");
     cardCloseButton.classList.add("detailed-card-close-button");
-    cardCloseButton.setAttribute("src", "close-button.PNG");
+    cardCloseButton.setAttribute("src", "icons/close-button.PNG");
     cardCloseButton.addEventListener("click", removeDetailedProjectCard);
     cardTop.appendChild(cardCloseButton);
 
@@ -189,7 +189,7 @@ function createHamburgerButton() {
 
     let hamburgerButton = document.createElement("img");
     hamburgerButton.classList.add("nav-item", "hamburger-button");
-    hamburgerButton.setAttribute("src", "hamburger-button.png");
+    hamburgerButton.setAttribute("src", "icons/hamburger-button.png");
     hamburgerButton.setAttribute("alt", "≡");
     hamburgerButton.addEventListener("click", displayHamburgerMenu);
     
@@ -203,7 +203,7 @@ function createHamburgerMenu() {
     // Hamburger Menu Close Button
     let hamburgerMenuCloseButton = document.createElement("img");
     hamburgerMenuCloseButton.classList.add("hamburger-menu-close-button");
-    hamburgerMenuCloseButton.setAttribute("src", "close-button.PNG");
+    hamburgerMenuCloseButton.setAttribute("src", "icons/close-button.PNG");
     hamburgerMenuCloseButton.addEventListener("click", removeHamburgerMenu);
 
     // Hamburger Menu
