@@ -158,9 +158,9 @@ const hamburgerButton = createHamburgerButton();
 const hamburgerMenu = createHamburgerMenu();
 
 const navBarQuery = window.matchMedia("screen and (min-width: 700px)");
-navBarQuery.addEventListener("change", updateNavBar);
+// navBarQuery.addEventListener("change", updateNavBar);
 collapseNavBar();
-updateNavBar();
+// updateNavBar();
 
 function updateNavBar(event) {
     alert(`${navBarQuery.matches}`)
