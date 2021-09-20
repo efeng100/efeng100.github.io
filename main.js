@@ -2,6 +2,17 @@ const projectCardGrid = document.querySelector("#project-cards");
 
 const projectData = [
     {
+        name: "Square Lab",
+        image: "project-thumbnails/square-lab.PNG",
+        altText: "Square Lab Thumbnail",
+        description: "A full stack web aim training game. \
+        Players click colored tiles on a grid quickly and accurately in two game modes across three grid sizes. \
+        The site's backend supports user authentication, saving viewable high scores for each account in every game mode. \
+        Logged in users gain access to a profile view that displays player base score distributions and statistics with graph generation APIs, \
+        allowing players to visualize how their personal best performances stack up against others and compete.",
+        link: "square-lab.netlify.app",
+    },
+    {
         name: "Online Pokédex",
         image: "project-thumbnails/pokedex.PNG",
         altText: "Pokédex Thumbnail",
