@@ -32,33 +32,33 @@ const projectData = [
         The game also includes a multithreaded auto-advance feature that can update the board at a user-chosen tick rate.",
         link: "github.com/efeng100/ConwayGameOfLife",
     },
-    {
-        name: "AI Checkers",
-        image: "project-thumbnails/checkers.PNG",
-        altText: "Checkers Thumbnail",
-        description: "A one-player or two-player checkers game in Python with a GUI created using the Tkinter library. \
-        In one-player mode, the opponent AI player calculates their best move using a recursive minimax function that considers \
-        best/worse case scenarios over a chosen number of turns in the future.",
-        link: "",
-    },
-    {
-        name: "Minesweeper",
-        image: "project-thumbnails/minesweeper.PNG",
-        altText: "Minesweeper Thumbnail",
-        description: "Minesweeper in Python with a GUI built with the Tkinter library. \
-        The user chooses the board's width and height, as well as the number of hidden mines. \
-        The game includes the standard controls for revealing bombs (left click), flagging tiles (right click), and \
-        revealing around a revealed tile with sufficient adjacent flags (double left click).",
-        link: "",
-    },
-    {
-        name: "Discus Dice Game",
-        image: "project-thumbnails/discus.PNG",
-        altText: "Discus Dice Game Thumbnail",
-        description: "A Java implementation of Reiner Knizia's Dice Decathlon Discus event (a family tabletop game) \
-        with a GUI built with JavaFX",
-        link: "",
-    },
+    // {
+    //     name: "AI Checkers",
+    //     image: "project-thumbnails/checkers.PNG",
+    //     altText: "Checkers Thumbnail",
+    //     description: "A one-player or two-player checkers game in Python with a GUI created using the Tkinter library. \
+    //     In one-player mode, the opponent AI player calculates their best move using a recursive minimax function that considers \
+    //     best/worse case scenarios over a chosen number of turns in the future.",
+    //     link: "",
+    // },
+    // {
+    //     name: "Minesweeper",
+    //     image: "project-thumbnails/minesweeper.PNG",
+    //     altText: "Minesweeper Thumbnail",
+    //     description: "Minesweeper in Python with a GUI built with the Tkinter library. \
+    //     The user chooses the board's width and height, as well as the number of hidden mines. \
+    //     The game includes the standard controls for revealing bombs (left click), flagging tiles (right click), and \
+    //     revealing around a revealed tile with sufficient adjacent flags (double left click).",
+    //     link: "",
+    // },
+    // {
+    //     name: "Discus Dice Game",
+    //     image: "project-thumbnails/discus.PNG",
+    //     altText: "Discus Dice Game Thumbnail",
+    //     description: "A Java implementation of Reiner Knizia's Dice Decathlon Discus event (a family tabletop game) \
+    //     with a GUI built with JavaFX",
+    //     link: "",
+    // },
 ];
 
 function createProjectCardDiv(id) {
